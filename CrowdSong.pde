@@ -6,7 +6,8 @@ AudioPlayer[][] sounds = new AudioPlayer[69][3];
 int[][] playStatus = new int[69][3];
 PVector[][] soundVector = new PVector[69][3];
 
-int ratio=3;
+int rectSize = 5;
+int ratio=1;
 int currentPos=0;
 int prevPos=0;
 float move=0.0;
@@ -132,7 +133,7 @@ void drawCurrentTrack(int currentTrack){
         noFill();
       }
       noStroke();
-      rect(i*6,j*6,5,5);
+      rect(i*(rectSize+1),j*(rectSize+1),rectSize,rectSize);
       //ellipse(soundVector[i][j].x, soundVector[i][j].y, 3, 3);
     }
   }
